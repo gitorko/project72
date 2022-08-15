@@ -18,7 +18,9 @@ openjdk 17.0.3 2022-04-19 LTS
 To run zipkin server use the docker command
 
 ```bash
-docker run -d -p 9411:9411 openzipkin/zipkin
+docker run -d -p 9411:9411 --name my-zipkin openzipkin/zipkin
+docker stop my-zipkin
+docker start my-zipkin
 ```
 
 Login to zipkin UI, wait for few seconds for server to be up.
